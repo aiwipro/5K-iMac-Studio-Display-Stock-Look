@@ -2,55 +2,64 @@
 
 Converting a 5K iMac to act as a generic 5K display is nothing new. What is yet to be found is a conversion that keeps the stock iMac look. This is what this project aims to achieve.
 
-This won't be a coprehensive guide to building the DIY Studio Display with any panel type nor any display driver board. For that, please see [this excellent guide by Mykola](https://khronokernel.github.io/macos/2022/03/01/5K-MONITOR.html).
+This won't be a comprehensive guide to building the DIY Studio Display with any panel type nor any display driver board. For that, please see [this excellent guide by Mykola](https://khronokernel.github.io/macos/2022/03/01/5K-MONITOR.html).
 
 The stock look will be achieved using the Thunderbolt 3 ports as input for both USB-C and DisplayPort. The USB A ports and the Ethernet port will have full functionality. When using the USB-C input, all data transfer and charging of the source computer will be done using just one cable.
 
 The FaceTime camera, microphones and speakers will all be integrated just like the original iMac.
 
 
-## Before and After
-
-Before
-
+## Before
 
 ![alt_text](images/image9.jpg "image_tooltip")
 
+A 2017 5K iMac
 
 ![alt_text](images/image47.png "image_tooltip")
 
+The ports on the back
 
-After (Adhesive strips not yet used as the setup is still being stress tested, the black dots indicates microphone locations)
+
+## After 
 
 
 ![alt_text](images/image60.jpg "image_tooltip")
 
+The adhesive strips not yet used as the setup is still being stress tested, the black dots indicates microphone locations
 
-![alt_text](images/image61.jpg "image_tooltip")
+![Nothing plugged in](images/image61.jpg "image_tooltip")
 
+The exterior of the device has the stock look. The only way to spot the mod is that the Thunderbot 3 ports and the Ethernet port are black. On the stock iMac, these are grey.
 
+![alt_text](images/image2.jpg "image_tooltip")
+
+A single USB-C cable is needed to give your computer a:
+
+- 5K Display
+- 4K FaceTime Camera
+- Microphone
+- Speakers
+- 90W Power Delivery
+
+(In this picture, an Ethernet cable is also attached)
 
 
 ## The Starting iMac - a 2017 5K iMac
 
-My starting point is a fully working 2017 5K iMac. It has:
+![alt_text](images/image16.png "image_tooltip")
 
+The starting point is a fully working 2017 5K iMac, which features:
 
-
-* High brightness 5K DCI P3 color gamut display, LM270QQ1 SDC1
-* Two thunderbolt 3 ports
+* High-brightness 5K DCI-P3 display ```LM270QQ1 SDC1```
+* Two Thunderbolt 3 ports
 * Four USB 3 ports
 * One Ethernet port
 * One SD card slot
-* One Headphones jack
+* One Headphone jack
 * One AC input
 * Built-in webcam
 * Built-in microphone
 * Built-in speakers
-
-
-![alt_text](images/image16.png "image_tooltip")
-
 
 
 ## The Plan
@@ -141,21 +150,21 @@ The majority of the parts were purchased while staying in China, as price and se
 
 
 
-## Step 1. Initial Layout
+## Step 1. Initial Teardown
 
 
 ![alt_text](images/image9.jpg "image_tooltip")
 
-
+A mid 2017 5K iMac, 5120x2880 IPS-panel with 100% DCI-P3
 
 ![alt_text](images/image22.jpg "image_tooltip")
 
-
+The display panel is removed from the case
 
 ![alt_text](images/image28.jpg "image_tooltip")
 
 
-I want to keep the high voltage AC connections in the same location as the original layout, as Apple has already placed good insulation in this location.
+The high voltage AC connections will be in the same location as the original layout, as Apple has already placed good insulation in this location.
 
 The main driver board should ideally be in the middle, as its ports could then be accessible through the RAM access door if needed.
 
@@ -168,18 +177,13 @@ A lot of room is kept clear in the lower right section, as cable management will
 
 The first step is to make sure everything works the way it should.
 
-
 ![alt_text](images/image43.jpg "image_tooltip")
-
 
 This was the only reference as to how to connect the backlight booster board. Fantastic.
 
-
 ![alt_text](images/image73.png "image_tooltip")
 
-
 It was enough. Here are some high resolution images for future reference.
-
 
 ![alt_text](images/image58.jpg "image_tooltip")
 
@@ -223,28 +227,21 @@ There’s a need to confirm that all of the above tests remain passed while intr
 
 
 
-## Step 3. Teardown
+## Step 3. Full Teardown
 
 Everything seems to work just fine. Fantastic. The disassembly continues.
 
-
 ![alt_text](images/image74.jpg "image_tooltip")
-
 
 In a minute or two we are done.
 
-
 ![alt_text](images/image38.jpg "image_tooltip")
-
 
 The iMac is really neat. Just three major components. The PSU, Logic Board, and Fan. The Facetime camera too, I guess.
 
-
 ![alt_text](images/image41.jpg "image_tooltip")
 
-
 Let’s not forget to carefully remove the digital MEMS microphone.
-
 
 ![alt_text](images/image62.jpg "image_tooltip")
 
@@ -254,8 +251,6 @@ Let’s not forget to carefully remove the digital MEMS microphone.
 
 The main components are roughly placed:
 
-
-
 * 24V PSU
 * 24V to 5V DC-DC converter
 * Driver board
@@ -264,14 +259,11 @@ The main components are roughly placed:
 
 Pictured but later removed: 
 
-
-
 * 24V to 12V DC-DC converter
 * Speaker amplifier
 
-Not pictured: 
 
-
+Not pictured:
 
 * USB network card
 * USB sound card
@@ -284,55 +276,59 @@ Not pictured:
 
 
 
-## Step 5. Modifications
+## Step 5. Components and Modifications
+
+
+The driver board is facing out towards the fan grille, and the original iMac fan returned. The driver board was placed on a new 3mm acrylic sheet, this time anchoring it in four places to the iMac case.
+
+![alt_text](images/image76.jpg "image_tooltip")
+
+
+The 2017 iMac fan pin-out is very similar to a regular 4 pin PC fan pinout, except that pin 1 and pin 2 are swapped (12V and ground). By using a Noctua PWM fan controller (NA-FC1), we can power the iMac fan and the controller using the original 12V fan connector on the driver board.
+
+![alt_text](images/image75.jpg "image_tooltip")
+
+The R1811 fan is rather loud, taking away from the magical iMac experience. Its noise is also picked up by the microphones. The stock fan is replaced with a silent Noctua 40x10mm fan together with the included NA-RC11 "100 Ohm Low Noise Adapter" and a NA-RC7 "50 Ohm Low Noise Adapter" in series. The microphones are padded with some sound insulation as well.
+
 
 The USB hub is deconstructed and reconstructed to form a 4-port USB hub that matches the original external USB receptacle spacing and look.
-
 
 ![alt_text](images/image66.jpg "image_tooltip")
 
 
 By using aluminum tape and some spare plastic parts a hub that will snugly fit the iMac is created. 
+
 ![alt_text](images/image56.jpg "image_tooltip")
-
-
 
 ![alt_text](images/image70.jpg "image_tooltip")
 
 
 Finding a set of white/gray usb receptacles is preferred as they match the original look.
 
-
 ![alt_text](images/image3.jpg "image_tooltip")
 
 
 Shortening the depth of the 90° USB 4 adapters allows the USB C cables to properly lock in place once the adapter is installed inside the iMac. A sacrificial USB-C cable is used to protect the innards of the adapter from accidental cuts when trimming.
-
 
 ![alt_text](images/image46.jpg "image_tooltip")
 
 
 The first adapter was cut by hand, and had its housing scuffed. The nicer looking one was trimmed using a Dremel.
 
-
 ![alt_text](images/image71.jpg "image_tooltip")
 
 
 A 3D printer would be fantastic for aligning and securing these components. Aluminum tape and various spare parts as spacing had to do the job in my case. The RJ45 ethernet receptacle is yet not trimmed to fit. Soldering the RJ45 receptacle to UTP cabling was unsuccessful in obtaining gigabit speeds, so a solderless solution was used.
-
 
 ![alt_text](images/image33.jpg "image_tooltip")
 
 
 Trimmed, connected and insulated RJ45 receptacle. Note that the front of the RJ45 receptacle was trimmed about 3mm in order for the latching mechanism to work correctly once installed inside the iMac.
 
-
 ![alt_text](images/image65.jpg "image_tooltip")
 
 
 For the speakers, a helpful user on the Macrumors provided the pinout: From top to bottom in this pic (with the contacts facing you):
-
-
 
 1. Woofer +
 2. Woofer -
@@ -341,14 +337,13 @@ For the speakers, a helpful user on the Macrumors provided the pinout: From top 
 5. Tweeter +
 6. Tweeter -
 
-You can see 3 is looped back to 4 in this pic.
 
+You can see 3 is looped back to 4 in this pic.
 
 ![alt_text](images/image25.png "image_tooltip")
 
 
 The microphone setup was designed by another user in their project “Coco-Mic”. You should probably use a non-polarized capacitor, as the diagram below actually shows. I used a polarized capacitor with the anode connected to the USB sound card microphone input. That worked for me.
-
 
 ![alt_text](images/image35.jpg "image_tooltip")
 
@@ -359,105 +354,49 @@ The microphone setup was designed by another user in their project “Coco-Mic�
 
 Using thin VHB tape enables the mounting of the microphones in the correct spot.
 
-
 ![alt_text](images/image54.jpg "image_tooltip")
 
 
 One of the microphones was placed in the original location. It is incredibly hard to align it. I used a microscope for this. The other microphone was placed in one of the screw holes. To minimize the risk of high voltage AC issues and other electrical noise from the PSU, the microphones are placed on the right hand side of the iMac.
-
 
 ![alt_text](images/image13.jpg "image_tooltip")
 
 
 The internal USB hub is stripped of its housing and wrapped in Kapton tape.
 
-
 ![alt_text](images/image51.jpg "image_tooltip")
 
 
-The Main driver board takes a lot of physical stress with its connectors and possible connection and reconnection of HDMI cables. It is placed on a 3mm plexiglass sheet.
+The layout has the iMac fan at lowest speed, silently blowing air over the driver board. And yes, the non-horizontal backlight booster board is killing me inside.
 
+![alt_text](images/image77.jpg "image_tooltip")
 
-![alt_text](images/image6.jpg "image_tooltip")
-
-
-The board is secured in four locations on the plexiglass sheet. The sheet is in turn fastened in three locations to the iMac. One corner hole is shared as the screw goes through the driver board and plexiglass sheet into the aluminum boss in the iMac. This is great as it also serves as a grounding point.
-
-
-![alt_text](images/image14.jpg "image_tooltip")
-
-
-All parts, except the crossover filters, are assembled. Please note that this is not the final design as I discovered that DC-DC conversion introduces a lot of electrical noise on the outgoing side. This noise caused the 12V rail driving the stereo amplifier to produce a lot of crackling noise in the speakers connected to the amplifier. After testing several amplifiers, it was determined that the best approach would be to skip the amplifier alltogether.
-
-
-![alt_text](images/image20.jpg "image_tooltip")
+![alt_text](images/image78.jpg "image_tooltip")
 
 
 The 4K autofocus webcam is secured on the monitor instead of the casing to reduce the tolerance chain and risk of misalignment.
 
+![alt_text](images/image26.jpg "image_tooltip")
 
 ![alt_text](images/image27.jpg "image_tooltip")
 
 
 On the topic of misalignment, the ports are very straight! Some of the misalignment in the picture is caused by the usb sticks themselves. Once we are happy with their location, we use two-component epoxy to lock it in place.
 
-
 ![alt_text](images/image53.jpg "image_tooltip")
-
-
-The most probable look will use a single USB 4 cable carrying all data and power to the computer connected to it. The ethernet cable is incredibly nice in dense radio locations like mine.
-
-
-![alt_text](images/image2.jpg "image_tooltip")
 
 
 The USB ports are nice and stock-looking. The USB-C ports are black and grip any attached USB-C cables firmly, as they should. The ethernet jack is black too, also not gray. It does grip the cable well and works as it should though.
 
-
 ![alt_text](images/image61.jpg "image_tooltip")
 
 
+A single USB 4 cable is able to carry all data and power to the computer connected to it. The ethernet cable is incredibly nice in dense radio locations.
 
-## Step 6. Testing
-
-During testing it was noted that the 12V speaker amp did not work as a DC-DC conversion introduces way too much noise on the DC input for the amp.
-
-After testing several amplifiers, it was determined that the best approach would be to skip them all together. The crossover filters were directly connected to the output of the USB Sound Card. This way, there was no static noise when there was no load on the speakers and the max volume was still sufficient.
-
-The R1811 fan was also too loud, taking away from the magical iMac experience. Its noise is also picked up by the microphones. The stock fan was replaced with a silent Noctua 40x10mm fan together with the included NA-RC11 "100 Ohm Low Noise Adapter" and a NA-RC7 "50 Ohm Low Noise Adapter" in series. The microphones are padded with some sound insulation as well.
+![alt_text](images/image2.jpg "image_tooltip")
 
 
-
-## Step 7. Re-design
-
-After extended stress testing the design passed. But, the driver board was very hot as the limited space between the driver board and the display panel caused very little air flow.
-
-A small redesign was needed. 
-
-
-The driver board was flipped around, facing out towards the fan grille, and the original iMac fan returned. The driver board was placed on a new 3mm acrylic sheet, this time anchoring it in four places to the iMac case.
-
-
-![alt_text](images/image76.jpg "image_tooltip")
-
-
-The 2017 iMac fan pinout is very similar to a regular 4 pin PC fan pinout, except that pin 1 and pin 2 are swapped (12V and ground). By using a Noctua PWM fan controller (NA-FC1), we can power the iMac fan and the controller using the original 12V fan connector on the driver board.
-
-
-![alt_text](images/image75.jpg "image_tooltip")
-
-
-The new layout has the iMac fan at lowest speed, silently blowing air over the driver board. And yes, the non-horizontal backlight booster board is killing me inside.
-
-
-![alt_text](images/image77.jpg "image_tooltip")
-
-
-![alt_text](images/image78.jpg "image_tooltip")
-
-
-
-## Step 8. Final Layout and Assembly
+## Step 6. Final Layout and Assembly
 
 Below is the fully assembled iMac Studio Display. Because of stress testing the adhesive strips are not yet used, but instead regular masking tape holds it together. The two black marks are indicators where not to tape during test assembly, as the microphones are in these locations.
 
@@ -465,36 +404,13 @@ Below is the fully assembled iMac Studio Display. Because of stress testing the 
 ![alt_text](images/image60.jpg "image_tooltip")
 
 
-
 ![alt_text](images/image77.jpg "image_tooltip")
-
 
 
 ![alt_text](images/image78.jpg "image_tooltip")
 
 
-
 ![alt_text](images/image15.jpg "image_tooltip")
-
-
-The webcam is taped at an angle.
-
-
-![alt_text](images/image26.jpg "image_tooltip")
-
-
-The computer is now working well
-
-
-![alt_text](images/image55.jpg "image_tooltip")
-
-
-
-![alt_text](images/image45.jpg "image_tooltip")
-
-
-
-![alt_text](images/image2.jpg "image_tooltip")
 
 
 
@@ -504,6 +420,7 @@ Using a USB-C cable from a Macbook works great on both inputs. Using an, alleged
 
 It’s totally possible to connect a regular DP cable with the RAM access door open. Both HDMI inputs are also very accessible and usable once the RAM access door is open.
 
+Currently, the speakers are running from the headphone output of the USB sound card. This is not ideal. The plan is to introduce a ground loop isolator and try to use a powered amplifier.
 
 
 ## Sources
