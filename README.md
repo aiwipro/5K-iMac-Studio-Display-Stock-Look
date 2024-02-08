@@ -2,55 +2,64 @@
 
 Converting a 5K iMac to act as a generic 5K display is nothing new. What is yet to be found is a conversion that keeps the stock iMac look. This is what this project aims to achieve.
 
-This won't be a coprehensive guide to building the DIY Studio Display with any panel type nor any display driver board. For that, please see [this excellent guide by Mykola](https://khronokernel.github.io/macos/2022/03/01/5K-MONITOR.html).
+This won't be a comprehensive guide to building the DIY Studio Display with any panel type nor any display driver board. For that, please see [this excellent guide by Mykola](https://khronokernel.github.io/macos/2022/03/01/5K-MONITOR.html).
 
 The stock look will be achieved using the Thunderbolt 3 ports as input for both USB-C and DisplayPort. The USB A ports and the Ethernet port will have full functionality. When using the USB-C input, all data transfer and charging of the source computer will be done using just one cable.
 
 The FaceTime camera, microphones and speakers will all be integrated just like the original iMac.
 
 
-## Before and After
-
-Before
-
+## Before
 
 ![alt_text](images/image9.jpg "image_tooltip")
 
+A 2017 5K iMac
 
 ![alt_text](images/image47.png "image_tooltip")
 
+The ports on the back
 
-After (Adhesive strips not yet used as the setup is still being stress tested, the black dots indicates microphone locations)
+
+## After 
 
 
 ![alt_text](images/image60.jpg "image_tooltip")
 
+The adhesive strips not yet used as the setup is still being stress tested, the black dots indicates microphone locations
 
-![alt_text](images/image61.jpg "image_tooltip")
+![Nothing plugged in](images/image61.jpg "image_tooltip")
 
+The exterior of the device has the stock look. The only way to spot the mod is that the Thunderbot 3 ports and the Ethernet port are black. On the stock iMac, these are grey.
 
+![alt_text](images/image2.jpg "image_tooltip")
+
+A single USB-C cable is needed to give your computer a:
+
+- 5K Display
+- 4K FaceTime Camera
+- Microphone
+- Speakers
+- 90W Power Delivery
+
+(In this picture, an Ethernet cable is also attached)
 
 
 ## The Starting iMac - a 2017 5K iMac
 
-My starting point is a fully working 2017 5K iMac. It has:
+![alt_text](images/image16.png "image_tooltip")
 
+The starting point is a fully working 2017 5K iMac, which features:
 
-
-* High brightness 5K DCI P3 color gamut display, LM270QQ1 SDC1
-* Two thunderbolt 3 ports
+* High-brightness 5K DCI-P3 display ```LM270QQ1 SDC1```
+* Two Thunderbolt 3 ports
 * Four USB 3 ports
 * One Ethernet port
 * One SD card slot
-* One Headphones jack
+* One Headphone jack
 * One AC input
 * Built-in webcam
 * Built-in microphone
 * Built-in speakers
-
-
-![alt_text](images/image16.png "image_tooltip")
-
 
 
 ## The Plan
