@@ -25,11 +25,11 @@ The ports on the back
 
 ![alt_text](images/image60.jpg "image_tooltip")
 
-The adhesive strips not yet used as the setup is still being stress tested, the black dots indicates microphone locations
+The final result, currently connected to a 14" Macbook Pro.
 
 ![Nothing plugged in](images/image61.jpg "image_tooltip")
 
-The exterior of the device has the stock look. The only way to spot the mod is that the Thunderbot 3 ports and the Ethernet port are black. On the stock iMac, these are grey.
+The exterior keeps the stock look. The only way to spot the mod is that the Thunderbolt 3 ports and the Ethernet port are black. On the stock iMac, these are grey.
 
 ![alt_text](images/image2.jpg "image_tooltip")
 
@@ -398,7 +398,7 @@ A single USB 4 cable is able to carry all data and power to the computer connect
 
 ## Step 6. Final Layout and Assembly
 
-Below is the fully assembled iMac Studio Display. Because of stress testing the adhesive strips are not yet used, but instead regular masking tape holds it together. The two black marks are indicators where not to tape during test assembly, as the microphones are in these locations.
+Below is the fully assembled "Apple iMac Studio Display".
 
 
 ![alt_text](images/image60.jpg "image_tooltip")
