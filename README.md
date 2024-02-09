@@ -193,20 +193,16 @@ It was enough. Here are some high resolution images for future reference.
 
 ![alt_text](images/image69.jpg "image_tooltip")
 
-
-Tests show that we have full 5K resolution at 10 bit color with Display Stream Compression (DSC) active for both USB-C and DisplayPort. The DSC ON message appears when changing input source, so it is not visible in the pictures below.
+Tests show that we have 5K resolution at 10 bit color with Display Stream Compression (DSC) active for both USB-C and DisplayPort. The DSC ON message appears when changing input source, so it is not visible in the pictures below.
 
 
 ![alt_text](images/image24.jpg "image_tooltip")
 
 
-
 ![alt_text](images/image37.jpg "image_tooltip")
 
 
-When trying HDMI I get full 5K resolution, but it says Reduced Bit Rate (RBR) and not full RGB but rather 422. My 2023 Macbook Pro does have HDMI 2.1 so it should work. 
-
-I won’t dwell on this though, as I rarely use HDMI anyway. It could even be the cable I used not meeting the bandwidth requirements despite the cable manufacturer claiming so. Anyway, I will share some other cool features supported on the HDMI 2.1 board in the second image.
+The HDMI ports offer 5K resolution, but at Reduced Bit Rate (RBR) and not full RGB but rather 422.
 
 
 ![alt_text](images/image44.jpg "image_tooltip")
@@ -216,20 +212,12 @@ I won’t dwell on this though, as I rarely use HDMI anyway. It could even be th
 
 Power delivery is supported and works well at 90W when using USB-C.
 
-
 ![alt_text](images/image34.png "image_tooltip")
-
-
-There’s a need to confirm that all of the above tests remain passed while introducing the various 90° angle adapters and dongles. This mirrors the final build configuration.
-
-
-![alt_text](images/image39.jpg "image_tooltip")
-
 
 
 ## Step 3. Full Teardown
 
-Everything seems to work just fine. Fantastic. The disassembly continues.
+The next step is to perform the full disassembly.
 
 ![alt_text](images/image74.jpg "image_tooltip")
 
@@ -237,58 +225,28 @@ In a minute or two we are done.
 
 ![alt_text](images/image38.jpg "image_tooltip")
 
-The iMac is really neat. Just three major components. The PSU, Logic Board, and Fan. The Facetime camera too, I guess.
+The iMac is really neat. Just three major components: The PSU, Logic Board, and Fan. The FaceTime camera too, I guess.
 
 ![alt_text](images/image41.jpg "image_tooltip")
 
-Let’s not forget to carefully remove the digital MEMS microphone.
+The digital MEMS microphone is carefully removed.
 
 ![alt_text](images/image62.jpg "image_tooltip")
 
 
-
-## Step 4. Rough fitting
-
-The main components are roughly placed:
-
-* 24V PSU
-* 24V to 5V DC-DC converter
-* Driver board
-* Backlight booster board
+## Step 4. Components and Modifications
 
 
-Pictured but later removed: 
-
-* 24V to 12V DC-DC converter
-* Speaker amplifier
-
-
-Not pictured:
-
-* USB network card
-* USB sound card
-* USB hub
-* Crossover filters
-* Data cables in general
-
-
-![alt_text](images/image63.jpg "image_tooltip")
-
-
-
-## Step 5. Components and Modifications
-
-
-The driver board is facing out towards the fan grille, and the original iMac fan returned. The driver board was placed on a new 3mm acrylic sheet, this time anchoring it in four places to the iMac case.
+The driver board is facing out towards the fan grille. The driver board is placed on a 3mm acrylic sheet, anchoring it in four places to the iMac case.
 
 ![alt_text](images/image76.jpg "image_tooltip")
 
 
-The 2017 iMac fan pin-out is very similar to a regular 4 pin PC fan pinout, except that pin 1 and pin 2 are swapped (12V and ground). By using a Noctua PWM fan controller (NA-FC1), we can power the iMac fan and the controller using the original 12V fan connector on the driver board.
+The 2017 iMac fan pin-out is very similar to a regular 4 pin PC fan pin-out, except that pin 1 and pin 2 are swapped (12V and ground). By using a Noctua PWM fan controller (NA-FC1), the iMac fan and the controller are powered using the 12V fan connector on the driver board.
 
 ![alt_text](images/image75.jpg "image_tooltip")
 
-The R1811 fan is rather loud, taking away from the magical iMac experience. Its noise is also picked up by the microphones. The stock fan is replaced with a silent Noctua 40x10mm fan together with the included NA-RC11 "100 Ohm Low Noise Adapter" and a NA-RC7 "50 Ohm Low Noise Adapter" in series. The microphones are padded with some sound insulation as well.
+The R1811 fan is rather loud, taking away from the magical iMac experience. Its noise is also picked up by the microphones. The stock fan is replaced with a silent Noctua 40x10mm fan together with the included NA-RC11 "100 Ohm Low Noise Adapter" and a NA-RC7 "50 Ohm Low Noise Adapter" in series.
 
 
 The USB hub is deconstructed and reconstructed to form a 4-port USB hub that matches the original external USB receptacle spacing and look.
@@ -357,7 +315,7 @@ Using thin VHB tape enables the mounting of the microphones in the correct spot.
 ![alt_text](images/image54.jpg "image_tooltip")
 
 
-One of the microphones was placed in the original location. It is incredibly hard to align it. I used a microscope for this. The other microphone was placed in one of the screw holes. To minimize the risk of high voltage AC issues and other electrical noise from the PSU, the microphones are placed on the right hand side of the iMac.
+One of the microphones was placed in the original location. It is incredibly hard to align it. I used a microscope for this. The other microphone was placed in one of the screw holes. To minimize the risk of high voltage AC issues and other electrical noise from the PSU, the microphones are placed on the right hand side of the iMac. They are padded with some sound insulation as well.
 
 ![alt_text](images/image13.jpg "image_tooltip")
 
@@ -396,7 +354,7 @@ A single USB 4 cable is able to carry all data and power to the computer connect
 ![alt_text](images/image2.jpg "image_tooltip")
 
 
-## Step 6. Final Layout and Assembly
+## Step 5. Final Layout and Assembly
 
 Below is the fully assembled "Apple iMac Studio Display".
 
