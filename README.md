@@ -351,7 +351,7 @@ On the topic of misalignment, the ports are very straight! Some of the misalignm
 ![alt_text](images/image53.jpg "image_tooltip")
 
 
-The USB ports are nice and stock-looking. The USB-C ports are black and grip any attached USB-C cables firmly, as they should. The ethernet jack is black too, also not gray. It does grip the cable well and works as it should though.
+All receptacles grip any attached cables firmly, as they should. The only visual difference from a stock iMac is the black USB-C ports and ethernet jack.
 
 ![alt_text](images/image61.jpg "image_tooltip")
 
