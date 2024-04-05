@@ -308,7 +308,7 @@ You can see 3 is looped back to 4 in this pic.
 The silkscreen print on the R1811 is actually incorrect. The correct pin-out on the R1811 is L+, L-, R-, R+.
 
 
-The microphone setup was designed by another user in their project “Coco-Mic”. You should probably use a non-polarized capacitor, as the diagram below actually shows. I used a polarized capacitor with the anode connected to the USB sound card microphone input. That worked for me.
+The microphone setup was designed by Sahas in their project “Coco-Mic”. You should probably use a non-polarized capacitor, as the diagram below actually shows. I used a polarized capacitor with the anode connected to the USB sound card microphone input. That worked too.
 
 ![alt_text](images/image35.jpg "image_tooltip")
 
@@ -338,6 +338,9 @@ The layout has the iMac fan at lowest speed, silently blowing air over the drive
 
 ![alt_text](images/image78.jpg "image_tooltip")
 
+The fans were wired in the following configuration: Static low speed on the 40mm fan, manually adjustable 0%-100% speed on the iMac fan.
+
+![alt_text](images/image80.png "image_tooltip")
 
 The plastic part that holds the original FaceTime camera is modified and fitted with the new 4K camera. By reusing the old plastic part, a good angle and alignment of the camera is ensured.
 
